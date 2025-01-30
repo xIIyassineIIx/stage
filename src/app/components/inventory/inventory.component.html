@@ -1,0 +1,116 @@
+
+<main><nav>
+<p class="text-primary fs-3 fw-bold">Serch Filter</p>
+    <div>
+        <p (click)="Onaffiche(f1)">Car Condetion :</p>
+        <div #f1 hidden>
+            @for (item of tab_condition; track $index) {
+                <span>{{item}}</span><input type="checkbox" (change)="OnFilter($event)"><br>
+            }
+        </div>
+    </div>
+    <div >
+        <p (click)="Onaffiche(f2)">Odometre :</p>
+        <div #f2 hidden>
+            <input type="number" placeholder="min">
+            <input type="number" placeholder="max">
+        </div>
+        
+    </div>
+    <div >
+        <p (click)="Onaffiche(f3)">year :</p>
+        <div #f3 hidden>
+            <input type="number" placeholder="min">
+            <input type="number" placeholder="max">
+        </div>
+        
+    </div >
+    <div >
+        <p (click)="Onaffiche(f4)">location :</p>
+        <div #f4 hidden>
+            @for (item of tab_location; track $index) {
+                <span>{{item}}</span><input type="checkbox" (change)="OnFilter($event)"><br>
+            }
+        </div>
+        
+    </div>
+    <div >
+        <p (click)="Onaffiche(f5)">brand :</p>
+        <div #f5 hidden>
+            @for (item of tab_brand; track $index) {
+                <span>{{item}}</span><input type="checkbox" (change)="OnFilter($event)"><br>
+            }
+        </div>
+        
+    </div>
+    <div >
+        <p (click)="Onaffiche(f6)">transmission :</p>
+        <div #f6 hidden>
+            @for (item of tab_transmission; track $index) {
+                <span>{{item}}</span><input type="checkbox"(change)="OnFilter($event)"><br>
+            }
+        </div>
+        
+    </div>
+    <div>
+        <p (click)="Onaffiche(f7)">type :</p>
+        <div #f7 hidden>
+            @for (item of tab_type; track $index) {
+                <span>{{item}}</span><input type="checkbox" (change)="OnFilter($event)" ><br>
+            }
+        </div>
+    </div>
+    <div class="btn">
+        <button class="btn btn-primary fw-bold" (click)="OnClick()">apply</button>
+        <button class="btn btn-danger fw-bold" (click)="OnReset()">reset</button>
+    </div>
+    
+</nav>
+<section>
+    <div class="bg-secondary text-light">
+        <table>
+            <tr>
+                <th style="border: none; width: 24%;">Image</th>
+                <th style="width: 10%;">Lot</th>
+                <th style="width: 20%;">Vehicule Info</th>
+                <th style="width: 10%;">Condition</th>
+                <th style="width: 20%;">Sale Info</th>
+                <th style="width: 20%;"> Bids</th>
+            </tr>
+        </table>
+    </div>
+    
+    
+        @for (item of tab; track $index) {
+            <div>
+                <table>
+                <tr>
+                    <td style="width: 20%;"><img [src]="item.image[0]" alt=""></td>
+                    <td style="width: 10%;">
+                        <p class="text-primary fw-bold">{{item.brand}} {{item.model}}</p>
+                        <p class="text-primary">#{{item.id}}</p>
+                    </td>
+                    <td style="width: 20%;">
+                        <p class="text-secondary">odometre : {{item.odometre}}</p>
+                        <p class="text-secondary">estimated retail value : {{item.estimated}}</p>
+                    </td>
+                    <td style="width: 10%;">
+                        
+                        <p class="text-secondary">damage : {{item.primaryDamage}}</p>
+                    </td>
+                    <td style="width: 20%;">
+                        <p class="text-primary">location :{{item.location}}</p>
+                        <p class="text-danger fw-bold">{{item.date | remainTime}}</p>
+                    </td>
+                    <td style="width: 20%;">
+                        <p class="text-secondary">current bid : {{item.currentBid}}</p>
+                        <button class="btn btn-primary"(click)="cardetails(item.id)">details</button>
+                        <button class="btn btn-success">bid now</button>
+                    </td>
+                </tr>
+            </table>
+            </div>
+        }
+    
+</section>
+</main>

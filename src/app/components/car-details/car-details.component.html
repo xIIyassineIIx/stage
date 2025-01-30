@@ -1,0 +1,74 @@
+<h1> {{car.brand}} {{car.model}}</h1>
+<p class="text-muted dated"><span class="text-danger">auction starts in :</span> {{car.date | startTime}}</p>
+<hr>
+<section>
+    <article class="show">
+        <div class="slider" #slider>
+            <img [src]="car.image[0]" alt="">
+            <img [src]="car.image[1]" alt="">
+            <img [src]="car.image[2]" alt="">
+            
+        </div>
+        <button class="b1" (click)="left()"><</button>
+        <button class="b2" (click)="right()">></button>
+        <div class="mini_slider" >
+            <img [src]="car.image[0]" alt="">
+            <img [src]="car.image[1]" alt="">
+            <img [src]="car.image[2]" alt="">
+        </div>
+    </article>
+    
+    <article class="specs">
+
+        <table>
+            <tr>
+                <td colspan="2" class="text-secondary fw-bold">BASIC Info</td>
+            </tr>
+            <tr>
+                <td class="fw-bold text-dark">Lot Number:</td>
+                <td>{{car.id}}</td>
+            </tr>
+            <tr>
+                <td class="fw-bold text-dark">VIN:</td>
+                <td>{{car.vin}}</td>
+            </tr>
+            <tr>
+                <td class="fw-bold text-dark">Title OR Damage:</td>
+                <td>{{car.primaryDamage}}</td>
+            </tr>
+            <tr>
+                <td class="fw-bold text-dark">Odometre:</td>
+                <td>{{car.odometre}}</td>
+            </tr>
+            <tr>
+                <td class="fw-bold text-dark">Estimated Value:</td>
+                <td>{{car.estimated}}</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="text-secondary fw-bold">Engine and Transmission</td>
+            </tr>
+            <tr>
+                <td class="fw-bold text-dark">Engine:</td>
+                <td>{{car.engineType}}</td>
+            </tr>
+            <tr>
+                <td class="fw-bold text-dark">Transmission:</td>
+                <td>{{car.transmission}}</td>
+            </tr>
+            <tr>
+                <td class="fw-bold text-dark">Drivetrain:</td>
+                <td>{{car.drive}}</td>
+            </tr>
+            <tr>
+                <td class="fw-bold text-dark">Car Type:</td>
+                <td>{{car.type}}</td>
+            </tr>
+        </table>
+
+    </article>
+    <article class="bid">
+        <p><span class="fs-5 text-secondary fw-bold">CURRENT BID</span> <br><span class="fs-4">${{car.currentBid}}</span></p>
+        <p><span class="text-danger fw-bold">Auction Countdown: </span> {{car.date | remainTime}}</p>
+        <button class="btn btn-primary"(click)="bidnow(car.id)">Bid Now</button>
+    </article>
+</section>

@@ -1,0 +1,31 @@
+
+<div class="main-login">
+    <div class="create">
+   <h1 class="text-dark">Step-<span #num>1</span>:Create An Account</h1>
+
+<div class="progress">
+    <div #progress class="progress-bar bg-danger progressbar" role="progressbar" style="width: 50%;" aria-valuenow="50%" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+</div>
+<div id="register" class="register" #step1 >
+    <h2 class="text-primary">Get Started</h2>
+    <hr>
+    <p><i class=" text-danger ">*</i>all required</p>
+    <form  [formGroup]="formregister" (submit)="onsubmit1()">
+        <label for="1" >username<i class=" text-danger ">*</i></label><br><input type="text" class="form-control" formControlName="username" id="1"><br>
+        <label for="2">mail<i class=" text-danger ">*</i></label><br><input type="text" class="form-control" formControlName="email" id="2"><br>
+        <label for="3">password<i class=" text-danger ">*</i></label><br><input type="text" class="form-control" formControlName="password" id="3">
+        <div><input type="checkbox" id="4" formControlName="accepted"><label for="4" class="check">I agree that I am at least 18 years of age and that I have read and agreed to all Terms and Privacy Policy<i class=" text-danger ">*</i></label></div>
+        <button class="btn btn-primary" type="submit" [disabled]="formregister.invalid">create your account <i class="bi bi-arrow-right "></i></button>
+    </form>
+
+</div>
+<div #step2 class="step2" hidden>
+    <h1> Thank you  </h1>
+    <p>Welcome <span class="fw-bold text-danger">{{username}}</span> to <span class="fw-bold text-primary">Copart</span>, your one-stop destination for all your auction and car needs! We're thrilled to have you join our community.</p>
+    <p>Our platform is designed to make your experience <span class="fw-bold text-danger">smooth</span> and <span class="fw-bold text-danger">enjoyable</span>. If you have any questions or need assistance, our team is here to help you every step of the way.
+
+        <br><span class="fw-bold text-success">Thank you for choosing us</span>, and we wish you the best of luck in finding your <span class="fw-bold text-dark">dream car!</span></p>
+        <button (click)="onsubmit11()" class="btn btn-primary" >return to menu</button>
+</div>
+</div>

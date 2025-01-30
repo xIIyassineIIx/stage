@@ -1,0 +1,121 @@
+.notif {
+    width: 75%;
+    height: fit-content;
+    display: flex;
+    border: 1px solid yellow;
+    justify-content: space-around;
+    border-radius: 10px;
+    margin-top: 2%;
+    margin-left: 12.5%;
+}
+
+.notif i {
+    font-size: 50px;
+    align-self: center;
+}
+
+.notif p {
+    width: 80%;
+    align-self: center;
+}
+
+.conversation {
+    width: 75%;
+    height: 700px;
+    max-height: 700px;
+    border: 1px solid lightblue;
+    border-radius: 10px;
+    margin: 2% 0 5% 12.5%;
+    overflow: visible;
+    box-shadow: 0 0 20px rgba(15, 207, 255, 0.5);
+    position: relative;
+}
+
+.chatbox {
+    width: 75%;
+    display: flex;
+    border-radius: 10px;
+    top: 92%;
+    left: 12.5%;
+    position: absolute;
+}
+
+/*qdqsd*/
+.chat-container {
+    width: 75%;
+    height: 90vh;
+    
+    overflow-y: scroll;
+
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+
+
+.c1 {
+    float: left;
+    
+}
+
+.c2 {
+    float: right;
+
+}
+
+.chat-container .c1,.chat-container .c2 {
+    max-width: 70%;
+    padding: 10px 15px;
+    margin-bottom: 3px;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 1.4;
+    position: relative;
+    flex-shrink: 0; 
+}
+.sc{
+
+    height: 45px;
+}
+.c2 {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.c1 {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.chat-container .c1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+.chat-container .c2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.c1::after {
+    left: 0px;
+    border-width: 0  15px 15px 0;
+    border-color:  transparent transparent #4caf50  transparent ;
+}
+
+.c2::after {
+    right: 0px;
+    border-width: 0 0 15px 15px;
+    border-color:  transparent transparent #e0e0e0  transparent ;
+}

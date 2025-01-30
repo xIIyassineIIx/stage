@@ -1,0 +1,39 @@
+.register{
+    width: 50%;
+    padding: 10%;
+    text-transform: capitalize;
+
+}
+.check{
+    text-transform: none;
+} 
+.register input{
+    border: 1px solid lightskyblue;
+}
+.register label{
+    font-size: 18px;
+    margin: 5px;
+}
+.register div{
+    display: flex;
+    margin: 20px 0 20px 20px;
+}
+.progressbar{
+    border-radius: 10px;
+}
+.create{
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+}
+.step2{
+    text-align: center;
+    margin: 3% 0 3% 0;
+    padding: 20px;
+}
+.step2 h1{
+    margin-bottom: 4%;
+}
+.step2 button{
+    margin-top: 4%;
+}

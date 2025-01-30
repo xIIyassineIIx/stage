@@ -1,0 +1,29 @@
+<main>
+    <a [routerLink]="['/home']"><img src="tupart_red-removebg-preview.png" alt=""></a>
+    <div class="rech">
+            <button><i class="bi bi-search"></i></button>
+            <input type="text" placeholder="       Serach Specified Inventory From Here">
+            <button class="invent bg-warning"  >  Serach Inventory  </button>
+            
+    </div>
+    <div class="auth">
+        @if(this.aurhservice.currentUserSig()){
+            <span class="text-light fw-bold fs-4">
+                {{this.aurhservice.currentUserSig()?.username}}
+            </span>
+            <button class="bg-danger text-light" (click)="logout()">Log Out</button>
+        }
+        @else {
+            <button class="bg-warning" [routerLink]="['/register']">Register</button>
+            <button class="bg-primary text-light" [routerLink]="['/login']">Sign In</button>
+        }
+    </div>
+</main>
+
+<ul class="nav nav-tabs bg-dark " >
+    <li class="nav-item"><a class="text-light" [routerLink]="['/howItWorks']">How It Works</a></li>
+    <li class="nav-item"><a class="text-light" [routerLink]="['/inventory']">Inventory</a></li>
+    <li class="nav-item"><a class="text-light" href="#">Auctions</a></li>
+    <li class="nav-item"><a class="text-light" href="#">Locations</a></li>
+    <li class="nav-item"><a class="text-light" [routerLink]="['/support']">Services & Support</a></li>
+</ul>

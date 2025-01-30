@@ -1,0 +1,78 @@
+
+<aside>
+    <article id="slider" #slider>
+        <div class="add1">
+            <span>
+                <p class="text-light  aa">Many of</p>
+                <P class="text-light  bb">Flood Vehicles</P>
+                <P class="text-light  bb">Available</P>
+                <button class="btn btn-light"> View Inventory > </button>
+            </span>
+            
+        </div>
+        <div class="add2">
+            <p class="text-light fs-2">100% Online Auto Auctions</p>
+            <p class="text-light fs-5">Over 5 Million Used, Wholesale and Repairable Cars, Trucks & SUVs sold per year!</p>
+            <span class="tips">
+                <div class="tips-detail">
+                    <span><div class="num bg-warning">1</div>Register</span>
+                    <p>Sign up for a Copart Basic or Premier Membership.</p>
+                </div>
+                <div class="tips-detail">
+                    <span><div class="num bg-warning">2</div>Find</span>
+                    <p>Search our inventory of more than 500,000+ used & repairable vehicles.</p>
+                </div>
+                <div class="tips-detail">
+                    <span><div class="num bg-warning">3</div>Bid</span>
+                    <p>Bid on daily auto auctions </p>
+                </div>
+            </span>
+        </div>
+    </article>
+    <button class="b1" (click)="left()"><</button>
+    <button class="b2" (click)="right()">></button>
+</aside>
+<h1 class="text-muted"><i class="bi bi-search"></i> Suggestions  </h1>
+<div class="model_examples text-muted">
+    
+    @for (item of tab; track $index) {
+        <div class="element">
+            <div class="img">
+                <img [src]="item.image[0]" alt="">
+            </div>
+            <p class="fw-bold" style="text-align: center;">Brand   :   {{item.brand}} {{item.model}}  </p>
+            <p>Lot # <span class="text-primary">{{item.id}}</span></p>
+            <p>Bid Status: 
+                @if (item.bidStatus=="no") {
+                    <span class="fw-bold text-danger">Bidding Start Later</span>
+                }
+                @else {
+                    <span class="fw-bold text-success">Start The Bidding</span>
+                }
+                
+            </p>
+            <p>Location : <span class="text-dark fw-bold">{{item.location}}</span> </p>
+            <button class="btn btn-warning fw-bold" (click)="cardetails(item.id)">Details</button>
+        </div>
+        
+    }
+</div>
+<div class="introduction bg-dark">
+    <h2 class="text-light">What is Copart?</h2>
+    <p>
+        Copart is a global leader in <span class="text-warning">100%</span>online car auctions featuring used, wholesale and repairable vehicles. We make it easy for Members to find, bid on, and win vehicles like <span class="text-warning">classic cars, boats, repo cars, ATVs, exotics, motorcycles and more</span>.
+        As a global used car auction company, Copart puts the power to bid and win into your hands. Sign up for a Basic or Premier Membership to start bidding and winning used car auctions.
+    </p>
+</div>
+
+<div class="auther">
+    <div class="img"></div>
+    <p>Yassine AKKARI</p>
+    <div class="socials">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+
+    </div>
+</div>
+

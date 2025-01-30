@@ -1,0 +1,18 @@
+<div>
+    <h1>Welcome Back!</h1>
+    <form  [formGroup]="formlogin" (submit)="onsubmit2()">
+        <table>
+            <tr>
+                <td><label for="">Mail</label></td>
+            <td> <input type="text" formControlName="email" class="form-control"></td></tr>
+            <tr>
+                <td><label for="">Password</label></td>
+                <td><input type="text" formControlName="password" class="form-control"></td>
+            </tr>
+            <tr ><td></td><td ><button class="btn btn-primary">Log-In</button></td></tr>
+        </table>
+       <br>
+       
+        
+    </form>
+</div>

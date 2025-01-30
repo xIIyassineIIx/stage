@@ -1,0 +1,54 @@
+img{
+
+    width: 200px;
+    height: 150px;
+}
+section{
+    width: 70%;
+    height: fit-content;
+     margin-bottom: 10% ;
+
+}
+section>div{
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 3%;
+}
+table{
+    width: 100%;
+}
+table th{
+    height: 80px;
+    border-left: 1px solid rgb(255, 255, 255);
+}
+table tr{
+    margin-bottom: 200px;
+
+}
+table td,th{
+    padding: 0 20px 0 20px;
+}
+main{
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-around;
+}
+nav{
+    width: 20%;
+}
+
+nav div>p{
+    background-color: lightgray;
+    text-transform: capitalize;
+    font-size: 20px;
+    padding: 2%;
+}
+.btn{
+    width: 100%;
+}
+.btn button{
+    width: 50%;
+}
+
+

@@ -1,0 +1,33 @@
+<main>
+    <div class="notif alert alert-warning">
+        <i class="bi bi-exclamation-circle"></i>
+        <p>Thank you for reaching out to us! Your message will be received, and our support team is here to assist you.
+            You can expect a response within 5 minutes to 1 hour. We truly appreciate your patience and will do our best
+            to get back to you as soon as possible.</p>
+    </div>
+    <div class="conversation">
+        <div class="chat-container" #slider>
+                @for (item of chat; track $index) {
+                    @if (item.sender==authservice.currentUserSig()?.UID) {
+                        <div class="sc">
+                            <div class="c1">{{item.message}}</div>
+                        </div>
+                        
+                    }
+                    @else {
+                        <div class="sc">
+                            <div class="c2">{{item.message}}</div>
+                        </div>
+                        
+                    }
+                }
+
+            
+          </div>
+        <div class="chatbox">
+                <input type="text" class="form-control" #val>
+                <button class="btn btn-primary" (click)="onclick(val)">Send</button>
+            </div>
+    </div>
+    
+</main>

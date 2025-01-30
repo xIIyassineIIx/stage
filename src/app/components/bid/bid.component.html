@@ -1,0 +1,94 @@
+<main>
+    <section>
+        <article class="disp">
+            <div class="slider" #slider>
+                @for (item of car.image; track $index) {
+                <img [src]="item" alt="">
+                }
+            </div>
+        </article>
+        <div>
+            <article class="specs">
+
+                <table>
+                    <tr>
+                        <td colspan="2" class="text-secondary fw-bold">BASIC Info</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold text-dark">Lot Number:</td>
+                        <td>{{car.id}}</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold text-dark">Location:</td>
+                        <td>{{car.location}}</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold text-dark">Title OR Damage:</td>
+                        <td>{{car.primaryDamage}}</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold text-dark">Odometre:</td>
+                        <td>{{car.odometre}}</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold text-dark">Estimated Value:</td>
+                        <td>{{car.estimated}}</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td colspan="2" class="text-secondary fw-bold">Engine and Transmission</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold text-dark">VIN:</td>
+                        <td>{{car.vin}}</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold text-dark">Highlight:</td>
+                        <td>{{car.highlight}}</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold text-dark">color:</td>
+                        <td>{{car.color}}</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold text-dark">Engine:</td>
+                        <td>{{car.engineType}}</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold text-dark">Transmission:</td>
+                        <td>{{car.transmission}}</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold text-dark">Drivetrain:</td>
+                        <td>{{car.drive}}</td>
+                    </tr>
+                    <tr>
+                        <td class="fw-bold text-dark">Car Type:</td>
+                        <td>{{car.type}}</td>
+                    </tr>
+                </table>
+
+            </article>
+        </div>
+    </section>
+    <div>
+
+        <div class="details">
+            <div class="progress-container">
+
+                <svg class="progress-ring" width="120" height="120">
+                    <circle class="progress-ring-background" cx="60" cy="60" r="50"></circle>
+                    <circle class="progress-ring-progress" #progressCircle cx="60" cy="60" r="50"></circle>
+                </svg>
+                <div class="progress-text">
+                    <div>{{counter}}</div>
+                </div>
+
+            </div>
+            <div class="hh fw-bold fs-5">current holder: <br>{{car.holder}}</div>
+        </div>
+        <div    class="value fs-5 fw-bold">{{car.currentBid}} TND</div>
+        <button class="btn btn-primary fs-5 fw-bold" (click)="bid()"> bidover</button>
+    </div>
+</main>

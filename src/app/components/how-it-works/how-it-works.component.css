@@ -1,0 +1,127 @@
+div
+{
+    width: 100%;
+    height: 500px;
+    
+}
+.elem{
+    background: rgb(33,37,41);
+    background: linear-gradient(313deg, rgba(33,37,41,1) 0%, rgba(0,0,252,1) 35%, rgba(0,0,0,1) 100%);
+    position: relative;
+    display: flex;
+}
+.elem2{
+    position: relative;
+    display: flex;
+}
+.elem3{
+    position: relative;
+    display: flex;
+    background: rgb(0,0,0);
+    background: linear-gradient(147deg, rgba(0,0,0,1) 0%, rgba(252,21,0,1) 0%, rgba(33,37,41,1) 100%);
+}
+
+
+.elem ::after{
+    content: "";
+    width: 5%;
+    height: 100%;
+    background-color: yellow;
+    top: 0%;
+    position: absolute;
+    transform: skewX(-20deg);
+    left: 70%;
+}
+.elem ::before{
+    content: "";
+    width: 5%;
+    height: 100%;
+    background-color: yellow;
+    top: 0%;
+    position: absolute;
+    transform: skewX(-20deg);
+    right: 18%;
+}
+.elem2 ::after{
+    content: "";
+    width: 5%;
+    height: 100%;
+    background-color: grey;
+    top: 0%;
+    position: absolute;
+    transform: skewX(20deg);
+    left: 30%;
+}
+.elem2 ::before{
+    content: "";
+    width: 5%;
+    height: 100%;
+    background-color: #212529;
+    top: 0%;
+    position: absolute;
+    transform: skewX(20deg);
+    left: 23%;
+}
+.elem3 ::after{
+    content: "";
+    width: 5%;
+    height: 100%;
+    background-color: black;
+    top: 0%;
+    position: absolute;
+    transform: skewX(-20deg);
+    left: 70%;
+}
+.elem3 ::before{
+    content: "";
+    width: 5%;
+    height: 100%;
+    background-color: black;
+    top: 0%;
+    position: absolute;
+    transform: skewX(-20deg);
+    right: 18%;
+}
+.elem >.desc{
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 50%;
+    height: 100%;
+
+}
+.elem2 >.desc{
+    margin-top: 7%;
+    margin-right: 5%;
+    width: 50%;
+    height: 100%;
+
+}
+.elem3>.desc{
+    margin-top: 8%;
+    margin-left: 5%;
+    width: 50%;
+    height: 100%;
+}
+img{
+    position: relative;
+    z-index: 9999;
+}
+h2{
+    
+    text-align: center;
+}
+
+p{
+   
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10%;
+}
+.num{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-color: yellow;
+    border-radius: 50%;
+    
+}
