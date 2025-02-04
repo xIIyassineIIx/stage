@@ -1,3 +1,10 @@
+<p>
+    
+    @if (this.aurhservice.currentUserSig()) {
+        your id is: <br>
+    {{this.aurhservice.currentUserSig()?.UID}}
+    }
+</p>
 <main>
     <section>
         <article class="disp">
@@ -75,7 +82,8 @@
     <div>
 
         <div class="details">
-            <div class="progress-container">
+            
+            <div class="progress-container" #timer>
 
                 <svg class="progress-ring" width="120" height="120">
                     <circle class="progress-ring-background" cx="60" cy="60" r="50"></circle>

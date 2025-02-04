@@ -9,6 +9,13 @@
                 <td><label for="">Password</label></td>
                 <td><input type="text" formControlName="password" class="form-control"></td>
             </tr>
+            <tr>
+                <td colspan="2">
+                   @if (errormassage) {
+                    <p class="text-danger">wrong e-mail or password</p>
+                   } 
+                </td>
+            </tr>
             <tr ><td></td><td ><button class="btn btn-primary">Log-In</button></td></tr>
         </table>
        <br>

@@ -19,13 +19,13 @@ main>section{
 }
 main>div{
     width: 25%;
-    border: 1px solid black;
+
 }
 .details{
     display: flex;
     width: 100%;
     height: 120px;
-    border: 1px solid red;
+   
 }.hh{
     width: 200px;
     text-align: center;

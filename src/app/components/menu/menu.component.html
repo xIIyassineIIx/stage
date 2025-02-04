@@ -1,16 +1,30 @@
 <main>
     <a [routerLink]="['/home']"><img src="tupart_red-removebg-preview.png" alt=""></a>
     <div class="rech">
-            <button><i class="bi bi-search"></i></button>
-            <input type="text" placeholder="       Serach Specified Inventory From Here">
+            <button (click)="onclick(value)"><i class="bi bi-search"></i></button>
+            <input type="text" placeholder="       Serach Specified Inventory From Here" #value >
+            <div class="serchedvalue">
+                @for (item of cars2; track $index) {
+                    <a [routerLink]="['/cardetails',item.id]" (click)="refresh()">
+                         <div class="value" >
+                        <img [src]="item.image[0]" alt="">
+                        <div>
+                        {{item.brand}}
+                        {{item.model}}
+                    </div>
+                    </div>
+                    </a>
+                   
+                }
+            </div>
             <button class="invent bg-warning"  >  Serach Inventory  </button>
             
     </div>
     <div class="auth">
         @if(this.aurhservice.currentUserSig()){
-            <span class="text-light fw-bold fs-4">
+            <button class="text-light fw-bold btn" (click)="accountdetail()">
                 {{this.aurhservice.currentUserSig()?.username}}
-            </span>
+            </button>
             <button class="bg-danger text-light" (click)="logout()">Log Out</button>
         }
         @else {

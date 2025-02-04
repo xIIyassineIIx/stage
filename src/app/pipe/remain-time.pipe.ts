@@ -13,7 +13,8 @@ export class RemainTimePipe implements PipeTransform {
     date_depot.setDate(date_depot.getDate()-10)
     let date2=new Date(date_depot.setDate(date_depot.getDate()+15))
     date_depot.setDate(date_depot.getDate()-15)
-    console.log(date2<date)
+    console.log(date1)
+    console.log(date2)
     if(date2<date){
       return "auction ended"
     }
